@@ -10,6 +10,7 @@ const TodoList = () => {
   const addTodo = todo => {
     setTodos([...todos, {id: uuidv4(), task: todo,
     completed: false,  isEditing: false}])
+    console.log(todos)
   }
   return (
     <div>TodoList
