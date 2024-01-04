@@ -1,5 +1,4 @@
 import TodoList from './TodoList';
-import css from './App.css';
 
 function App() {
   return (
