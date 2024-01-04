@@ -13,12 +13,16 @@ const TodoList = () => {
     completed: false,  isEditing: false}])
     console.log(todos)
   }
+
+  const toggleComplete = id => {
+    setTodos(todos.map(todo => todo.id === id ? {todo, completed: !todo.completed} : todo))
+  }
   return (
     <div className='TodoList'>
         <h1>Get Things done!</h1>
         <AddTodoForm addTodo={addTodo}></AddTodoForm>
         {todos.map((todo, index) => (
-          <Todo task={todo} key={index} />
+          <Todo task={todo} key={index} toggleComplete={toggleComplete}/>
         ))}
         <Todo></Todo>
     </div>
