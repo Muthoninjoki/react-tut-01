@@ -28,3 +28,5 @@ const EditTodoForm = ({editTodo, task}) => {
     </form>
   )
 }
+
+export default EditTodoForm
