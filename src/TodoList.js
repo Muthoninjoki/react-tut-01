@@ -30,7 +30,11 @@ const TodoList = () => {
         <h1>Get Things done!</h1>
         <AddTodoForm addTodo={addTodo}></AddTodoForm>
         {todos.map((todo, index) => (
+          todo.isEditing ? (
+            <EditTodoForm />
+          ) : (
           <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
+          )
         ))}
         <Todo></Todo>
     </div>
